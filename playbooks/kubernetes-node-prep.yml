@@ -1,0 +1,21 @@
+---
+- name: Prepare Nodes for RKE2 Kubernetes
+  hosts: all
+  become: yes
+  tasks:
+    - name: Disable swap
+      command: swapoff -a
+      changed_when: false
+
+    - name: Install required packages for Kubernetes
+      apt:
+        name:
+          - curl
+          - iptables
+          - iproute2
+        state: present
+
+    - name: Load br_netfilter module
+      modprobe:
+        name: br_netfilter
+        state: present
