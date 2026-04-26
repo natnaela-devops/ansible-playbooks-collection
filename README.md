@@ -52,8 +52,5 @@ flowchart LR
     
     F[Target Servers\n(Ubuntu/Debian)]
 ```
-
-
-
 # Run with become (sudo)
 ansible-playbook -i inventory.ini playbooks/setup-docker.yml --become
