@@ -1,0 +1,9 @@
+---
+- name: Install common utilities
+  apt:
+    name:
+      - htop
+      - vim
+      - curl
+      - git
+    state: present
