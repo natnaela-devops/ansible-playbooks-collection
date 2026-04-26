@@ -37,7 +37,7 @@ ansible-playbook -i inventory.ini playbooks/setup-docker.yml
 ## Real-World Application
 I have used these playbooks (or very similar ones) to automate server provisioning and Docker/Kubernetes setup across multiple health facilities and banking infrastructure. This significantly reduced deployment time and ensured consistency across environments.
 
-## Architecture / Workflow
+## Workflow Overview
 
 ```mermaid
 flowchart LR
@@ -50,7 +50,7 @@ flowchart LR
     D --> F
     E --> F
     
-    F[Target Servers\n(Ubuntu/Debian)]
+    F[Target Servers - Ubuntu or Debian]
 ```
 # Run with become (sudo)
 ansible-playbook -i inventory.ini playbooks/setup-docker.yml --become
