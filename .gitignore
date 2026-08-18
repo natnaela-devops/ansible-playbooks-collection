@@ -1,11 +1,8 @@
-# Kubernetes
+.cache/
+.venv/
+*.retry
+*.log
+__pycache__/
 kubeconfig
 *.kubeconfig
-
-# Helm
-charts/
-Chart.lock
-
-# Temporary files
-*.log
-.DS_Store
+vault-password*

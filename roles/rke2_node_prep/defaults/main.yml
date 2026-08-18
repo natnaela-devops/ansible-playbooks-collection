@@ -1,0 +1,8 @@
+---
+rke2_node_prep_required_packages:
+  - cryptsetup
+  - curl
+  - iproute2
+  - iptables
+  - nfs-common
+  - open-iscsi

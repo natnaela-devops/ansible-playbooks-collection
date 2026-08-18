@@ -1,9 +1,13 @@
 ---
-- name: Install common utilities
-  apt:
-    name:
-      - htop
-      - vim
-      - curl
-      - git
+- name: Verify a Debian-family host
+  ansible.builtin.assert:
+    that:
+      - ansible_os_family == "Debian"
+    fail_msg: This lab currently supports Debian-family hosts only.
+
+- name: Install common packages
+  ansible.builtin.apt:
+    name: "{{ common_packages }}"
     state: present
+    update_cache: true
+    cache_valid_time: 3600

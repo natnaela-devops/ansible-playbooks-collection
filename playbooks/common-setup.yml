@@ -1,0 +1,8 @@
+---
+- name: Apply common operating-system baseline
+  hosts: all
+  become: true
+  gather_facts: true
+
+  roles:
+    - role: common
