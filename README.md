@@ -3,6 +3,12 @@
 [![Validate](https://github.com/natnaela-devops/ansible-playbooks-collection/actions/workflows/validate.yml/badge.svg)](https://github.com/natnaela-devops/ansible-playbooks-collection/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+A sanitized, reproducible Ansible lab for preparing Ubuntu hosts with a common operating-system baseline, Docker Engine, and the host prerequisites commonly required by RKE2.
+
+The project is intentionally focused: it demonstrates disciplined infrastructure automation, reusable role design, safe defaults, validation, and idempotency without pretending to be a production cluster installer.
+
+> **Portfolio scope:** This repository is lab work. It is not copied from an employer environment and does not claim that these exact playbooks were deployed in production. Example addresses use documentation-only networks and all environment-specific values must be reviewed before use.
+
 ## CI verification and reproducibility
 
 **Latest verified successful `main` run at the time of this documentation update:** [GitHub Actions run #37586134716](https://github.com/natnaela-devops/ansible-playbooks-collection/actions/runs/37586134716) (2026-10-07). The live [Validate workflow](https://github.com/natnaela-devops/ansible-playbooks-collection/actions/workflows/validate.yml) and badge above show subsequent runs and their current status; the linked historical run is evidence of a specific successful execution, not a guarantee of future success.
@@ -16,12 +22,6 @@ python3 -m pip install -r requirements-ci.txt && ansible-galaxy collection insta
 ```
 
 Inspect the workflow source in [`.github/workflows/validate.yml`](.github/workflows/validate.yml) for the complete set of commands and runner dependencies. A green badge is not a substitute for reviewing the job output or testing in the intended deployment environment.
-
-A sanitized, reproducible Ansible lab for preparing Ubuntu hosts with a common operating-system baseline, Docker Engine, and the host prerequisites commonly required by RKE2.
-
-The project is intentionally focused: it demonstrates disciplined infrastructure automation, reusable role design, safe defaults, validation, and idempotency without pretending to be a production cluster installer.
-
-> **Portfolio scope:** This repository is lab work. It is not copied from an employer environment and does not claim that these exact playbooks were deployed in production. Example addresses use documentation-only networks and all environment-specific values must be reviewed before use.
 
 ## Architecture
 
