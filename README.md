@@ -3,9 +3,9 @@
 [![Validate](https://github.com/natnaela-devops/ansible-playbooks-collection/actions/workflows/validate.yml/badge.svg)](https://github.com/natnaela-devops/ansible-playbooks-collection/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A sanitized, reproducible Ansible lab for preparing Ubuntu hosts with a common operating-system baseline, Docker Engine, and the host prerequisites commonly required by RKE2.
+I use this lab to keep repetitive Ubuntu host preparation in Ansible roles instead of copying setup commands between machines. It covers a common baseline, Docker Engine and RKE2 prerequisites.
 
-The project is intentionally focused: it demonstrates disciplined infrastructure automation, reusable role design, safe defaults, validation, and idempotency without pretending to be a production cluster installer.
+The CI job checks syntax and lint, then runs the common role twice to catch tasks that keep reporting changes. Docker and RKE2 host setup still need testing on actual disposable VMs.
 
 > **Portfolio scope:** This repository is lab work. It is not copied from an employer environment and does not claim that these exact playbooks were deployed in production. Example addresses use documentation-only networks and all environment-specific values must be reviewed before use.
 
@@ -42,7 +42,7 @@ Inspect the workflow source in [`.github/workflows/validate.yml`](.github/workfl
 
 More detail is available in [`docs/architecture.md`](docs/architecture.md).
 
-## What this demonstrates
+## What the roles cover
 
 - Role-based Ansible structure with fully qualified collection names
 - Reusable defaults instead of hard-coded users and packages
